@@ -1,0 +1,242 @@
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+body { 
+  background-color: #7c7b7b;
+}
+
+.icons { 
+  display: inline-block;
+  width: 141px;
+  height: 370px;
+  overflow: hidden;
+  background: #fff url("./assets/reel.png") repeat-y;
+  will-change: backgroundPosition;
+  transition: 0.3s background-position ease-in-out;
+  transform: translateZ(0);
+}
+
+.icons:nth-child(2) {
+  margin: 0 10px;
+}
+
+* { box-sizing: border-box; }
+
+.reel-container {
+  overflow: hidden;
+  height: 370px;  
+  padding: 2em;
+  transform: translate(-50%, -50%) scale(.62, .62);
+  position: absolute;
+  top: 320px;
+  left: 200px;
+  display: flex;
+  transition: 0.3s transform;
+}
+
+.app-wrap.winner-false {
+  animation: linear 1s spin;
+}
+
+.gradient-fade {
+  position: absolute;
+  top: 31px;
+  right: 30px;
+  bottom: -1px;
+  left: 30px;
+  background: linear-gradient(
+    to bottom, 
+    rgb(10, 9, 9) 10%,
+    rgba(64,64,64,0) 25%, 
+    rgba(114, 113, 113, 0) 60%, 
+    rgba(121, 120, 120, 0) 60%,
+    rgba(64,64,64,0) 75%, 
+    rgb(10, 9, 9) 90%
+  );
+}
+
+.paytable-container {
+  border: 5px solid black;
+  background-color: rgb(94, 81, 94);
+  position: absolute;
+  top: 105px;
+  left: 400px;
+  padding: 8px; 
+}
+
+.cherry-container {
+  background-color: rgb(226, 199, 76);
+  border: 2px dotted white
+}
+
+.cherry-text {
+  color: blue;
+}
+
+.paytable-image {
+  vertical-align: middle;
+  width:50px;
+  height:50px;
+}
+
+.debug-activator {
+  position: absolute;
+  top: 650px;
+  left: 400px;
+}
+.debug-container {
+  position: absolute;
+  top: 690px;
+  left: 400px; 
+}
+
+.debug-line-button {
+  width: 60px;
+  height: 30px;
+}
+.debug-button {
+  width: 70px;
+  height: 70px;
+}
+
+.balance-area {
+  border: 4px solid black;
+  position: absolute;
+  top: 105px;
+  left: 110px;
+  width: 200px;
+  height: 75px;
+  font-size: 50px;
+}
+
+.currency-symbol {
+  position: absolute;
+  top: 102px;
+  left: 65px; 
+  font-size: 70px;
+}
+
+.balance-input {
+  position:absolute;
+  top: 650px;
+  left: 495px;
+}
+
+.red-winline1{
+  width: 220px;
+  position: absolute;
+  top: 288px;
+  left: 89px;
+  border: none;
+  height: 5px;
+  background-color: rgb(230, 13, 13);
+}
+
+.red-winline2{
+  width: 220px;
+  position: absolute;
+  top: 327px;
+  left: 89px;
+  border: none;
+  height: 5px;
+  background-color: rgb(230, 13, 13);
+}
+
+.red-winline3{
+  width: 220px;
+  position: absolute;
+  top: 366px;
+  left: 89px;
+  border: none;
+  height: 5px;
+  background-color: rgb(230, 13, 13);
+}
+
+.winline1 {
+  width: 20px;
+  position: absolute;
+  top: 288px;
+  left: 143px;
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+.winline2 {
+  width: 20px;
+  position: absolute;
+  top: 327px;
+  left: 143px;
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+.winline3 {
+  width: 20px;
+  position: absolute;
+  top: 366px;
+  left: 143px;
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+.winline4 {
+  width: 20px;
+  position: absolute;
+  top: 288px;
+  left: 237px;
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+.winline5 {
+  width: 20px;
+  position: absolute;
+  top: 327px;
+  left: 237px;
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+
+.winline6 {
+  width: 20px;
+  position: absolute;
+  top: 366px;
+  left: 237px;
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+
+.cherry-text-blink {
+  animation: blinker 1s linear infinite;
+}
+
+.paytable-text-blink {
+  animation: blinker 1s linear infinite;
+}
+
+.spin-button {
+  border-radius: 20px;
+  position: absolute;
+  top: 460px;
+  left: 60px;
+  font-size: 100px;
+  border: 4px solid black;
+  background-color: rgb(185, 66, 66);
+}
+
+.spin-button:hover {
+  background-color: rgb(180, 33, 33);
+}
+
+.spin-button:active {
+  background-color: rgb(180, 33, 33);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
