@@ -87,6 +87,15 @@ body {
   top: 650px;
   left: 400px;
 }
+
+.debug-activator-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  top: 650px;
+  left: 400px;
+}
+
 .debug-container {
   position: absolute;
   top: 690px;
@@ -120,6 +129,14 @@ body {
 }
 
 .balance-input {
+  position:absolute;
+  top: 650px;
+  left: 495px;
+}
+
+.balance-input-disabled {
+  pointer-events: none;
+  opacity: 0.5;
   position:absolute;
   top: 650px;
   left: 495px;
@@ -220,12 +237,12 @@ body {
 }
 
 .spin-button {
+  border: 4px solid black;
   border-radius: 20px;
   position: absolute;
   top: 460px;
   left: 60px;
   font-size: 100px;
-  border: 4px solid black;
   background-color: rgb(185, 66, 66);
 }
 
@@ -237,6 +254,18 @@ body {
   background-color: rgb(180, 33, 33);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.spin-button-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  border: 4px solid black;
+  border-radius: 20px;
+  position: absolute;
+  top: 460px;
+  left: 60px;
+  font-size: 100px;
+  background-color: rgb(185, 66, 66);
 }
 
 
