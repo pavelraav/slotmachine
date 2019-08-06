@@ -213,10 +213,10 @@ class App extends React.Component {
         <div><BalanceArea balance={this.state.balance} /><span className={`currency-symbol`}>$</span></div>
         <div><PayTable winSums={this.state.winSums} key={this.state.winSums}/></div>
         <div>
-            <div>{this.state.final_state === null ? null : <button  className={`debug-activator`} onClick={this.debugHandler}>Debug on/off</button>}</div>
+            <div><button className={this.state.final_state === null ? `debug-activator-disabled` : `debug-activator`} onClick={this.debugHandler}>Debug on/off</button></div>
             <div>{this.state.debug ? <DebugArea getDebugInputs={this.getDebugInputs} /> : null}</div>
         </div>
-            <div>{this.state.final_state === null ? null : <button className={`balance-input`} onClick={this.balanceInputHandler}>Add balance</button>}</div>
+            <div><button className={this.state.final_state === null ? `balance-input-disabled` : `balance-input`} onClick={this.balanceInputHandler}>Add balance</button></div>
         <div className={`reel-container`}>
           <Reel debug={this.state.debug} debug_reel={this.state.debug_reel1} onFinish={this.finishHandler} ref={(child) => { this._child1 = child; }} timer="2000" />
           <Reel debug={this.state.debug} debug_reel={this.state.debug_reel2} onFinish={this.finishHandler} ref={(child) => { this._child2 = child; }} timer="2500" />
@@ -232,7 +232,7 @@ class App extends React.Component {
         {this.state.display_winline1 ? <hr className={`red-winline1`}></hr> : null }
         {this.state.display_winline2 ? <hr className={`red-winline2`}></hr> : null }
         {this.state.display_winline3 ? <hr className={`red-winline3`}></hr> : null }
-        <div>{this.state.final_state === null ? null : <button className={`spin-button`} onClick={this.play}>Spin!</button>}</div>
+        <div><button className={this.state.final_state === null ? `spin-button-disabled` : `spin-button`} onClick={this.play}>Spin!</button></div>
       </div>
     );
   }
